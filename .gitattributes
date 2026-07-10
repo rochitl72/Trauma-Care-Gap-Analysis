@@ -1,0 +1,2 @@
+district.sql filter=lfs diff=lfs merge=lfs -text
+state[[:space:]]1.sql filter=lfs diff=lfs merge=lfs -text

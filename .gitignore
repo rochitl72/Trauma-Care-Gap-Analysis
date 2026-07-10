@@ -9,13 +9,9 @@ venv/
 # --- OS ---
 .DS_Store
 
-# --- Large one-time boundary dumps ---
-# Loaded once into PostGIS by scripts/setup_database.sh. Each is 40-180MB,
-# over GitHub's hard push limit, so they aren't committed. Place them in the
-# repo root manually on the deploy host before the first bootstrap run.
-# See README.md > "Deploying" for where to get them.
-/district.sql
-/state\ 1.sql
+# district.sql and "state 1.sql" (the one-time boundary dumps loaded by
+# scripts/setup_database.sh) are committed via Git LFS — see .gitattributes —
+# instead of being excluded, since they're needed for a from-scratch clone.
 
 # --- Orphaned local cache from the old, unused grid_generator.py path ---
 # The live app fetches grid cells from PostGIS via db.py instead; these files

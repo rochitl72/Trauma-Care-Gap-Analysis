@@ -94,12 +94,25 @@ docker-compose.dev.yml   Local dev: just the db (start.sh runs Flask directly)
 ```
 
 A few files are intentionally **not** in this repo (see `.gitignore` for the
-full list with reasoning): the two large one-time boundary SQL dumps
-(`district.sql`, `state 1.sql`, ~170MB/45MB — over GitHub's push limit), an
-orphaned local-cache code path from an earlier implementation
-(`grid_generator.py` and its output), superseded pre-v2 precompute files, and
-the output of a "3D readiness" view that was removed from the app. None of
-this affects the live app; it's just not shipped in the organized repo.
+full list with reasoning): an orphaned local-cache code path from an earlier
+implementation (`grid_generator.py` and its output), superseded pre-v2
+precompute files, and the output of a "3D readiness" view that was removed
+from the app. None of this affects the live app; it's just not shipped in
+the organized repo.
+
+The two large one-time boundary SQL dumps (`district.sql` ~172MB, `state
+1.sql` ~45MB) **are** in the repo, tracked via **Git LFS** (see
+`.gitattributes`) since a plain git blob over ~100MB gets hard-rejected by
+GitHub. That means:
+
+- `git-lfs` needs to be installed wherever you `clone`, `push`, or `pull`
+  this repo — `brew install git-lfs` (macOS) or `apt-get install git-lfs`
+  (Debian/Ubuntu), then run `git lfs install` once per machine.
+- A normal `git clone` will fetch the LFS content automatically once
+  git-lfs is installed — no separate step needed.
+- They're still excluded from the **Docker build context** (`.dockerignore`)
+  and the container image itself, since they're only needed once, for the
+  host-side DB bootstrap in step 2 below — not by the running app.
 
 ## Local development
 
@@ -121,15 +134,17 @@ containers: `frontend` (nginx, port 80, proxies everything to `backend`),
 dev), and `db` (PostGIS, port 5433 — unchanged, kept open so the one-time
 bootstrap step below can reach it from the host).
 
-1. **Get the code + large data files onto the server.**
+1. **Get the code onto the server.**
    ```bash
+   sudo apt-get install -y git-lfs   # required — district.sql / state 1.sql are LFS objects
+   git lfs install
    git clone https://github.com/rochitl72/Trauma-Care-Gap-Analysis.git
    cd Trauma-Care-Gap-Analysis
    ```
-   Copy `district.sql`, `state 1.sql`, and `geolocations.sql` into the repo
-   root (they aren't in git — see above). `geolocations.sql` is small enough
-   to be committed already; only the two boundary dumps need transferring
-   separately (e.g. `scp`, or a shared drive).
+   `district.sql`, `state 1.sql`, and `geolocations.sql` all come down as
+   part of the clone — no separate transfer step, as long as git-lfs was
+   installed *before* cloning. (If you already cloned without it: install
+   git-lfs, then run `git lfs pull`.)
 
 2. **Bring up the database and load it (one-time).**
    ```bash
