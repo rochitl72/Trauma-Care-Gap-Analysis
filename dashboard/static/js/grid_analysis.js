@@ -177,10 +177,25 @@ function showCellDetails(feature, status) {
   `;
 }
 
+// Small helpers so a missing/late DOM node or a single malformed feature can't
+// silently abort the rest of a render pass (see renderAll below — that's
+// exactly the failure mode that made accident stats get stuck at "—" while
+// grid stats updated: one throw partway through renderCentroids blocked
+// renderAccidents from ever running).
+function checkedOf(id, fallback = false) {
+  const el = document.getElementById(id);
+  return el ? el.checked : fallback;
+}
+
+function setText(id, value) {
+  const el = document.getElementById(id);
+  if (el) el.textContent = value;
+}
+
 function renderGrid() {
   gridLayer.clearLayers();
-  const show = document.getElementById("layer-grid").checked;
-  const onlyUnreachable = document.getElementById("only-unreachable").checked;
+  const show = checkedOf("layer-grid", true);
+  const onlyUnreachable = checkedOf("only-unreachable");
 
   let redCount = 0;
   gridFeatures.forEach((f) => {
@@ -189,37 +204,41 @@ function renderGrid() {
     if (!show) return;
     if (onlyUnreachable && status === "green") return;
 
-    const layer = L.geoJSON(f, {
-      style: {
-        color: status === "green" ? "#16a34a" : "#dc2626",
-        weight: 1.3,
-        fillColor: status === "green" ? "#16a34a" : "#dc2626",
-        fillOpacity: status === "green" ? 0.16 : 0.34,
-      },
-    });
-    layer.eachLayer((cellLayer) => {
-      cellLayer.on("click", (e) => {
-        L.DomEvent.stopPropagation(e);
-        showCellDetails(f, status);
+    try {
+      const layer = L.geoJSON(f, {
+        style: {
+          color: status === "green" ? "#16a34a" : "#dc2626",
+          weight: 1.3,
+          fillColor: status === "green" ? "#16a34a" : "#dc2626",
+          fillOpacity: status === "green" ? 0.16 : 0.34,
+        },
       });
-    });
-    gridLayer.addLayer(layer);
+      layer.eachLayer((cellLayer) => {
+        cellLayer.on("click", (e) => {
+          L.DomEvent.stopPropagation(e);
+          showCellDetails(f, status);
+        });
+      });
+      gridLayer.addLayer(layer);
+    } catch (err) {
+      console.error("Skipping a grid cell with unusable geometry:", err, f);
+    }
   });
 
-  document.getElementById("stat-cells-total").textContent = String(gridFeatures.length);
-  document.getElementById("stat-cells-red").textContent = String(redCount);
-  document.getElementById("count-grid").textContent = String(show ? gridFeatures.length : 0);
+  setText("stat-cells-total", String(gridFeatures.length));
+  setText("stat-cells-red", String(redCount));
+  setText("count-grid", String(show ? gridFeatures.length : 0));
 }
 
 function renderCentroids() {
   centroidLayer.clearLayers();
-  const show = document.getElementById("layer-centroids").checked;
+  const show = checkedOf("layer-centroids", true);
   if (!show) {
-    document.getElementById("count-centroids").textContent = "0";
+    setText("count-centroids", "0");
     return;
   }
 
-  const onlyUnreachable = document.getElementById("only-unreachable").checked;
+  const onlyUnreachable = checkedOf("only-unreachable");
   let plotted = 0;
   gridFeatures.forEach((f) => {
     const props = f.properties || {};
@@ -227,31 +246,35 @@ function renderCentroids() {
     const { status } = evaluateCandidates(props.candidates);
     if (onlyUnreachable && status === "green") return;
 
-    const marker = L.circleMarker([props.centroid_lat, props.centroid_lon], {
-      radius: 4,
-      color: "#ffffff",
-      weight: 1.5,
-      fillColor: "#16324f",
-      fillOpacity: 0.95,
-    });
-    marker.bindTooltip(
-      `${formatCoord(props.centroid_lat)}, ${formatCoord(props.centroid_lon)}`,
-      { direction: "top", offset: [0, -4], className: "centroid-tip" }
-    );
-    marker.on("click", (e) => {
-      L.DomEvent.stopPropagation(e);
-      showCellDetails(f, status);
-    });
-    centroidLayer.addLayer(marker);
-    plotted += 1;
+    try {
+      const marker = L.circleMarker([props.centroid_lat, props.centroid_lon], {
+        radius: 4,
+        color: "#ffffff",
+        weight: 1.5,
+        fillColor: "#16324f",
+        fillOpacity: 0.95,
+      });
+      marker.bindTooltip(
+        `${formatCoord(props.centroid_lat)}, ${formatCoord(props.centroid_lon)}`,
+        { direction: "top", offset: [0, -4], className: "centroid-tip" }
+      );
+      marker.on("click", (e) => {
+        L.DomEvent.stopPropagation(e);
+        showCellDetails(f, status);
+      });
+      centroidLayer.addLayer(marker);
+      plotted += 1;
+    } catch (err) {
+      console.error("Skipping a grid cell centroid:", err, f);
+    }
   });
 
-  document.getElementById("count-centroids").textContent = String(plotted);
+  setText("count-centroids", String(plotted));
 }
 
 function renderAccidents() {
   accidentLayer.clearLayers();
-  const show = document.getElementById("layer-accidents").checked;
+  const show = checkedOf("layer-accidents", true);
 
   let redCount = 0;
   districtAccidents.forEach((f) => {
@@ -259,14 +282,18 @@ function renderAccidents() {
     if (status === "red") redCount += 1;
     if (!show) return;
 
-    const marker = L.marker([f.latitude, f.longitude], { icon: dangerRadarIcon(status, f.severity) });
-    marker.on("click", () => showAccidentDetails(f));
-    accidentLayer.addLayer(marker);
+    try {
+      const marker = L.marker([f.latitude, f.longitude], { icon: dangerRadarIcon(status, f.severity) });
+      marker.on("click", () => showAccidentDetails(f));
+      accidentLayer.addLayer(marker);
+    } catch (err) {
+      console.error("Skipping an accident marker:", err, f);
+    }
   });
 
-  document.getElementById("stat-accidents-total").textContent = String(districtAccidents.length);
-  document.getElementById("stat-accidents-red").textContent = String(redCount);
-  document.getElementById("count-accidents").textContent = String(show ? districtAccidents.length : 0);
+  setText("stat-accidents-total", String(districtAccidents.length));
+  setText("stat-accidents-red", String(redCount));
+  setText("count-accidents", String(show ? districtAccidents.length : 0));
 }
 
 async function loadFacilities() {
@@ -290,12 +317,22 @@ async function loadFacilities() {
 }
 
 function renderAll() {
-  renderGrid();
-  renderCentroids();
-  renderAccidents();
+  // Each step runs independently — a throw in one (bad geometry, a DOM node
+  // that isn't there yet, anything) must not prevent the others from running.
+  [renderGrid, renderCentroids, renderAccidents].forEach((fn) => {
+    try {
+      fn();
+    } catch (err) {
+      console.error(`${fn.name} failed:`, err);
+    }
+  });
   if (selected) {
-    if (selected.kind === "accident") showAccidentDetails(selected.data);
-    else showCellDetails(selected.data, evaluateCandidates((selected.data.properties || {}).candidates).status);
+    try {
+      if (selected.kind === "accident") showAccidentDetails(selected.data);
+      else showCellDetails(selected.data, evaluateCandidates((selected.data.properties || {}).candidates).status);
+    } catch (err) {
+      console.error("Failed to re-render selected feature details:", err);
+    }
   }
 }
 
@@ -413,8 +450,11 @@ async function loadGridAnalysis() {
     if (!gridFeatures.length) {
       setStatus(`No ${gridType} grid cells found for ${titleCase(district)} yet — try the other grid type.`, true);
     } else {
+      const accidentNote = districtAccidents.length
+        ? `${districtAccidents.length} accidents`
+        : "no accidents in the current dataset for this district";
       setStatus(
-        `${gridFeatures.length} ${gridType} cells and ${districtAccidents.length} accidents analyzed for ${titleCase(district)} against real hospital locations (OSRM road-route distance).`
+        `${gridFeatures.length} ${gridType} cells and ${accidentNote} analyzed for ${titleCase(district)} against real hospital locations (OSRM road-route distance).`
       );
     }
   } catch (err) {
