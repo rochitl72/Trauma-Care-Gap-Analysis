@@ -1,0 +1,28 @@
+.git
+__pycache__
+*.pyc
+.DS_Store
+.env
+
+# Large boundary dumps — only needed on the host for the one-time DB
+# bootstrap (scripts/setup_database.sh), never inside the image.
+district.sql
+state 1.sql
+
+# data/ is bind-mounted as a volume at runtime, not baked into the image.
+data/
+
+# Runtime caches
+dashboard/cache/
+
+# Legacy/unused
+dashboard/static/scored/
+dashboard/templates/_nav.html
+dashboard/grid_generator.py
+scripts/score_engine.py
+scripts/export_geojson.py
+READINESS_README.md
+SCORING_SPEC.md
+view_3d.command
+
+*.md

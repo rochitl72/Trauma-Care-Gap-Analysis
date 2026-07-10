@@ -1,0 +1,61 @@
+# Production/deploy stack for tcg.coers.in.
+#
+# frontend  -> exposed on host port 80, reverse-proxies everything to backend
+# backend   -> the Flask app (gunicorn), exposed on 5050 same as local dev
+# db        -> PostGIS, unchanged from local dev (still on 5433 so the
+#              one-time bootstrap in scripts/setup_database.sh can be run
+#              from the host — see README.md > Deploying)
+#
+# For local development, use docker-compose.dev.yml instead (just the db;
+# start.sh runs the Flask dev server directly on the host against it).
+services:
+  db:
+    image: postgis/postgis:16-3.4
+    container_name: tcga-postgis
+    environment:
+      POSTGRES_USER: mapsr
+      POSTGRES_PASSWORD: mapsr
+      POSTGRES_DB: mapsr
+    ports:
+      - "5433:5432"
+    volumes:
+      - tcga_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U mapsr -d mapsr"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    restart: unless-stopped
+
+  backend:
+    build:
+      context: .
+      dockerfile: dashboard/Dockerfile
+    container_name: tcga-backend
+    environment:
+      DATABASE_URL: postgresql://mapsr:mapsr@db:5432/mapsr
+      FLASK_DEBUG: "0"
+    ports:
+      - "5050:5050"
+    volumes:
+      - ./data:/app/data
+      - tcga_osmnx_cache:/app/dashboard/cache
+    depends_on:
+      db:
+        condition: service_healthy
+    restart: unless-stopped
+
+  frontend:
+    image: nginx:1.27-alpine
+    container_name: tcga-frontend
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+volumes:
+  tcga_pgdata:
+  tcga_osmnx_cache:

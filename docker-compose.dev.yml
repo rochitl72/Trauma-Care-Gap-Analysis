@@ -1,0 +1,20 @@
+services:
+  db:
+    image: postgis/postgis:16-3.4
+    container_name: mapsr-postgis
+    environment:
+      POSTGRES_USER: mapsr
+      POSTGRES_PASSWORD: mapsr
+      POSTGRES_DB: mapsr
+    ports:
+      - "5433:5432"
+    volumes:
+      - mapsr_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U mapsr -d mapsr"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  mapsr_pgdata:

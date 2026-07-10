@@ -1,0 +1,53 @@
+# --- Python / runtime ---
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+.env
+
+# --- OS ---
+.DS_Store
+
+# --- Large one-time boundary dumps ---
+# Loaded once into PostGIS by scripts/setup_database.sh. Each is 40-180MB,
+# over GitHub's hard push limit, so they aren't committed. Place them in the
+# repo root manually on the deploy host before the first bootstrap run.
+# See README.md > "Deploying" for where to get them.
+/district.sql
+/state\ 1.sql
+
+# --- Orphaned local cache from the old, unused grid_generator.py path ---
+# The live app fetches grid cells from PostGIS via db.py instead; these files
+# belong to an earlier local-file-cache implementation that nothing calls.
+/data/grids/
+/data/districts.geojson
+/data/state.geojson
+
+# --- Superseded pre-v2 precompute output ---
+# app.py only ever reads the *_v2.json files; these v1 files predate the
+# adjustable-threshold rework and are never read.
+/data/accident_hospital_safety.json
+/data/accident_ambulance_safety.json
+/data/accident_bloodbank_safety.json
+/data/district_scorecard.json
+
+# --- Runtime state written while the app runs ---
+# Recreated automatically (dataset_manager.py / grid_reach.py fall back safely
+# when these are missing) — don't want a live deployment's uploaded dataset
+# or per-district OSRM cache showing up as local git changes.
+/data/grid_reach/
+/data/accidents_active.csv
+/data/dataset_state.json
+/dashboard/cache/
+
+# --- Superseded 3D-readiness feature ---
+# That view was removed from the app; this is its leftover output/docs.
+/dashboard/static/scored/
+/dashboard/templates/_nav.html
+/dashboard/grid_generator.py
+/scripts/score_engine.py
+/scripts/export_geojson.py
+/READINESS_README.md
+/SCORING_SPEC.md
+/view_3d.command

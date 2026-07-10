@@ -1,0 +1,28 @@
+<nav class="icon-rail">
+  <a href="{{ url_for('index') }}" title="Rehabilitation Bioengineering Group — IIT Madras">
+    <img class="rail-brand" src="{{ url_for('static', filename='images/rbg-logo.png') }}" alt="RBG IIT Madras logo" />
+  </a>
+  <div class="rail-divider"></div>
+
+  <a href="{{ url_for('index') }}" class="rail-icon{{ ' active' if active == 'boundaries' else '' }}" title="Boundaries &amp; facilities">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.3-7-11a7 7 0 0 1 14 0c0 4.7-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+  </a>
+  <a href="{{ url_for('accident_safety_view') }}" class="rail-icon{{ ' active' if active == 'accident' else '' }}" title="Accident &middot; hospital reach">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="2.5"/><path d="M12 7.5v9M7.5 12h9"/></svg>
+  </a>
+  <a href="{{ url_for('ambulance_reach_view') }}" class="rail-icon{{ ' active' if active == 'ambulance' else '' }}" title="Ambulance reach">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13.5l1.3-4.2A2 2 0 0 1 6.2 8H15l3 4h1.5a1 1 0 0 1 1 1v3.5a1 1 0 0 1-1 1H19"/><path d="M3 13.5V17a1 1 0 0 0 1 1h1.5"/><circle cx="7.5" cy="18" r="1.8"/><circle cx="17" cy="18" r="1.8"/><path d="M9 10.5v3M7.5 12h3"/></svg>
+  </a>
+  <a href="{{ url_for('bloodbank_reach_view') }}" class="rail-icon{{ ' active' if active == 'bloodbank' else '' }}" title="Blood bank reach">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5s6 6.8 6 11a6 6 0 0 1-12 0c0-4.2 6-11 6-11z"/></svg>
+  </a>
+  <a href="{{ url_for('severity_heatmap_view') }}" class="rail-icon{{ ' active' if active == 'heatmap' else '' }}" title="Severity heatmap">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21.5c3.6 0 6-2.6 6-5.8 0-1.8-.9-2.9-1.8-3.7.1 1.8-.9 2.6-1.6 2-.1-2.6-1.7-4.9-3.1-6.3 0 2.6-2.4 4.3-2.4 6.8 0 .8.3 1.4.6 1.8-1.7-.6-2.7-2.1-2.9-4-1.7 1.8-2.8 3.6-2.8 5.4 0 2.7 3 3.8 6 3.8z"/></svg>
+  </a>
+  <a href="{{ url_for('district_scorecard_view') }}" class="rail-icon{{ ' active' if active == 'scorecard' else '' }}" title="District scorecard">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 20V13M11.5 20V6.5M18 20v-8.5"/></svg>
+  </a>
+  <a href="{{ url_for('grid_analysis_view') }}" class="rail-icon{{ ' active' if active == 'grid-analysis' else '' }}" title="Grid analysis &middot; accidents + hospital reach">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="7" height="7" rx="1.2"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.2"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.2"/><rect x="13.5" y="13.5" width="7" height="7" rx="1.2"/></svg>
+  </a>
+</nav>
