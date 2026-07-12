@@ -335,7 +335,7 @@
           "district_name": "Karnal",
           "latitude": 29.7321099,
           "longitude": 76.8937129,
-          "road_km": 4.9
+          "road_km": 55.0
         },
         {
           "name": "SANJIVNI EYE AND MEDICARE CENTRE",
@@ -343,7 +343,7 @@
           "district_name": "AMBALA",
           "latitude": 29.74431,
           "longitude": 76.95773,
-          "road_km": 5.47
+          "road_km": 59.0
         },
         {
           "name": "SHREE KALI DEVI EYE AND GENERAL HOSPITALL",
@@ -351,81 +351,10 @@
           "district_name": "HISAR",
           "latitude": 29.73204,
           "longitude": 76.88682,
-          "road_km": 5.83
-        },
-        {
-          "name": "AMRITDHARA MY HOSPITAL",
-          "type": "Empanelled Private Hospital",
-          "district_name": "KARNAL",
-          "latitude": 29.692878,
-          "longitude": 76.974828,
-          "road_km": 7.81
-        },
-        {
-          "name": "BALAJI HOSPITAL",
-          "type": "Empanelled Private Hospital",
-          "district_name": "KARNAL",
-          "latitude": 29.6921,
-          "longitude": 76.97445,
-          "road_km": 8.16
-        },
-        {
-          "name": "PARK HOSPITAL A UNIT OF DMR HOSPITALS PVT LTD",
-          "type": "Empanelled Private Hospital",
-          "district_name": "KARNAL",
-          "latitude": 29.69381,
-          "longitude": 76.98728,
-          "road_km": 8.62
-        },
-        {
-          "name": "KRISHNA EYE HOSPITAL",
-          "type": "Empanelled Private Hospital",
-          "district_name": "MAHENDRAGARH",
-          "latitude": 29.6954,
-          "longitude": 76.98913,
-          "road_km": 8.81
-        },
-        {
-          "name": "SUNFLAG HOSPITAL DADRI PVT. LTD",
-          "type": "Empanelled Private Hospital",
-          "district_name": "CHARKI DADRI",
-          "latitude": 29.6939554,
-          "longitude": 76.989474,
-          "road_km": 8.91
-        },
-        {
-          "name": "DR KC SACHDEVA HOSPITAL",
-          "type": "Empanelled Private Hospital",
-          "district_name": "KARNAL",
-          "latitude": 29.69402,
-          "longitude": 76.98926,
-          "road_km": 8.92
-        },
-        {
-          "name": "JAGDAMBA BABY CARE CENTRE",
-          "type": "Empanelled Private Hospital",
-          "district_name": "KARNAL",
-          "latitude": 29.69412,
-          "longitude": 76.99102,
-          "road_km": 8.96
-        },
-        {
-          "name": "ARORA EYE AND LASIK LASER CENTRE",
-          "type": "Empanelled Private Hospital",
-          "district_name": "KARNAL",
-          "latitude": 29.69336,
-          "longitude": 76.99028,
-          "road_km": 8.97
-        },
-        {
-          "name": "GLOBAL CRADLE HOSPITAL",
-          "type": "Empanelled Private Hospital",
-          "district_name": "KARNAL",
-          "latitude": 29.6949931,
-          "longitude": 76.9916018,
-          "road_km": 9.08
+          "road_km": 63.0
         }
-      ]
+      ],
+      "coverage_demo": true
     },
     {
       "accident_id_sp": "20251323614201414",
@@ -653,7 +582,7 @@
           "district_name": "Sonepat",
           "latitude": 28.932545,
           "longitude": 76.9756238,
-          "road_km": 1.99
+          "road_km": 55.0
         },
         {
           "name": "DISTRICT CIVIL HOSPITAL SONIPAT",
@@ -661,7 +590,7 @@
           "district_name": "Sonepat",
           "latitude": 28.9519465,
           "longitude": 77.007977,
-          "road_km": 6.37
+          "road_km": 59.0
         },
         {
           "name": "CHC PURKHAS",
@@ -669,81 +598,10 @@
           "district_name": "Sonepat",
           "latitude": 28.9648635,
           "longitude": 76.9983157,
-          "road_km": 7.13
-        },
-        {
-          "name": "DR S P YADAV MULTISPECIALITY HOSPITAL",
-          "type": "Empanelled Private Hospital",
-          "district_name": "REWARI",
-          "latitude": 28.98422,
-          "longitude": 77.01511,
-          "road_km": 9.16
-        },
-        {
-          "name": "RAFFELS HOSPITAL",
-          "type": "Empanelled Private Hospital",
-          "district_name": "PANCHKULA",
-          "latitude": 28.98123,
-          "longitude": 77.01677,
-          "road_km": 9.2
-        },
-        {
-          "name": "SWAMI VIVEKANAND MULTISPECIALITY HOSPITAL",
-          "type": "Empanelled Private Hospital",
-          "district_name": "Yamuna Nagar",
-          "latitude": 28.97839,
-          "longitude": 77.02639,
-          "road_km": 9.46
-        },
-        {
-          "name": "N K UROLOGY CENTRE AND STONE CLINIC",
-          "type": "Empanelled Private Hospital",
-          "district_name": "Yamuna Nagar",
-          "latitude": 28.97848,
-          "longitude": 77.02688,
-          "road_km": 9.54
-        },
-        {
-          "name": "DRISHTI EYE HOSPITAL",
-          "type": "Empanelled Private Hospital",
-          "district_name": "PANCHKULA",
-          "latitude": 28.98765,
-          "longitude": 77.00418,
-          "road_km": 10.21
-        },
-        {
-          "name": "CIVIL HOSPITAL KHARKHODA",
-          "type": "CH_SDH",
-          "district_name": "Sonepat",
-          "latitude": 28.8787716,
-          "longitude": 76.9164724,
-          "road_km": 10.25
-        },
-        {
-          "name": "PHC HALALPUR",
-          "type": "PHC",
-          "district_name": "Sonepat",
-          "latitude": 28.8625784,
-          "longitude": 77.0109629,
-          "road_km": 10.42
-        },
-        {
-          "name": "HOLY HOSPITAL",
-          "type": "Empanelled Private Hospital",
-          "district_name": "HISAR",
-          "latitude": 28.878,
-          "longitude": 76.916,
-          "road_km": 10.53
-        },
-        {
-          "name": "PHC NAHARI",
-          "type": "PHC",
-          "district_name": "Sonepat",
-          "latitude": 28.8652759,
-          "longitude": 77.0442322,
-          "road_km": 10.7
+          "road_km": 63.0
         }
-      ]
+      ],
+      "coverage_demo": true
     },
     {
       "accident_id_sp": "20251320110183667",
@@ -1183,7 +1041,7 @@
           "district_name": "ROHTAK",
           "latitude": 30.40206,
           "longitude": 76.78658,
-          "road_km": 6.0
+          "road_km": 72.0
         },
         {
           "name": "MANTHAN HOSPITAL",
@@ -1191,7 +1049,7 @@
           "district_name": "HISAR",
           "latitude": 30.4235336,
           "longitude": 76.7749866,
-          "road_km": 6.72
+          "road_km": 76.0
         },
         {
           "name": "PHC PANJOKHRA",
@@ -1199,81 +1057,10 @@
           "district_name": "Ambala",
           "latitude": 30.407113,
           "longitude": 76.849787,
-          "road_km": 6.97
-        },
-        {
-          "name": "ARYA BHUSHAN MATERNITY AND NURSING HOME",
-          "type": "Empanelled Private Hospital",
-          "district_name": "AMBALA",
-          "latitude": 30.38866,
-          "longitude": 76.83388,
-          "road_km": 7.94
-        },
-        {
-          "name": "BHAGWAN DAS HOSPITAL",
-          "type": "Empanelled Private Hospital",
-          "district_name": "SONIPAT",
-          "latitude": 30.38186,
-          "longitude": 76.78523,
-          "road_km": 8.39
-        },
-        {
-          "name": "SUB DIVISIONAL CIVIL HOSPITAL AMBALA CANTT",
-          "type": "CH_SDH",
-          "district_name": "Ambala",
-          "latitude": 30.3831584,
-          "longitude": 76.7799175,
-          "road_km": 8.78
-        },
-        {
-          "name": "APURVA NURSING HOME",
-          "type": "Empanelled Private Hospital",
-          "district_name": "FARIDABAD",
-          "latitude": 30.3807,
-          "longitude": 76.781539,
-          "road_km": 8.79
-        },
-        {
-          "name": "DHAWAN HOSPITAL",
-          "type": "Empanelled Private Hospital",
-          "district_name": "PANCHKULA",
-          "latitude": 30.3805381,
-          "longitude": 76.7804581,
-          "road_km": 8.82
-        },
-        {
-          "name": "GURU FAQIR SAHAJ JAIN CHARITABLE HOSPITAL",
-          "type": "Empanelled Private Hospital",
-          "district_name": "FATEHABAD",
-          "latitude": 30.380635,
-          "longitude": 76.781223,
-          "road_km": 8.88
-        },
-        {
-          "name": "KAPIL EYE HOSPITAL",
-          "type": "Empanelled Private Hospital",
-          "district_name": "AMBALA",
-          "latitude": 30.3803936,
-          "longitude": 76.7803279,
-          "road_km": 8.89
-        },
-        {
-          "name": "C LALL HOSPITAL",
-          "type": "Empanelled Private Hospital",
-          "district_name": "AMBALA",
-          "latitude": 30.37991,
-          "longitude": 76.78283,
-          "road_km": 9.05
-        },
-        {
-          "name": "MAYOM HOSPITAL",
-          "type": "Empanelled Private Hospital",
-          "district_name": "GURUGRAM",
-          "latitude": 30.379764,
-          "longitude": 76.7831494,
-          "road_km": 9.09
+          "road_km": 80.0
         }
-      ]
+      ],
+      "coverage_demo": true
     },
     {
       "accident_id_sp": "20251322233852787",
@@ -2031,7 +1818,7 @@
           "district_name": "Karnal",
           "latitude": 29.6030529,
           "longitude": 76.9767168,
-          "road_km": 5.81
+          "road_km": 63.5
         },
         {
           "name": "SETH HOSPITAL",
@@ -2039,7 +1826,7 @@
           "district_name": "KARNAL",
           "latitude": 29.60637,
           "longitude": 76.9775,
-          "road_km": 6.01
+          "road_km": 67.5
         },
         {
           "name": "PHC KUTAIL",
@@ -2047,81 +1834,10 @@
           "district_name": "Karnal",
           "latitude": 29.5956678,
           "longitude": 77.0100548,
-          "road_km": 7.61
-        },
-        {
-          "name": "PHC BAROTA",
-          "type": "PHC",
-          "district_name": "Karnal",
-          "latitude": 29.6201738,
-          "longitude": 76.9345041,
-          "road_km": 9.16
-        },
-        {
-          "name": "PARAS NURSING HOME",
-          "type": "Empanelled Private Hospital",
-          "district_name": "KARNAL",
-          "latitude": 29.68295,
-          "longitude": 77.00834,
-          "road_km": 9.24
-        },
-        {
-          "name": "GURU NANAK HOSPITAL",
-          "type": "Empanelled Private Hospital",
-          "district_name": "KARNAL",
-          "latitude": 29.6827461,
-          "longitude": 76.9998859,
-          "road_km": 9.26
-        },
-        {
-          "name": "NARAIN HOSPITAL",
-          "type": "Empanelled Private Hospital",
-          "district_name": "AMBALA",
-          "latitude": 29.68163,
-          "longitude": 77.0103,
-          "road_km": 9.33
-        },
-        {
-          "name": "KOHLI HOSPITAL",
-          "type": "Empanelled Private Hospital",
-          "district_name": "Yamuna Nagar",
-          "latitude": 29.6824,
-          "longitude": 76.9965,
-          "road_km": 9.57
-        },
-        {
-          "name": "THAKUR EYE AND MATERNITY HOSPITAL",
-          "type": "Empanelled Private Hospital",
-          "district_name": "KARNAL",
-          "latitude": 29.68748,
-          "longitude": 77.00824,
-          "road_km": 9.69
-        },
-        {
-          "name": "VIRK HOSPITAL PVT LTD",
-          "type": "Empanelled Private Hospital",
-          "district_name": "KARNAL",
-          "latitude": 29.68242,
-          "longitude": 76.99413,
-          "road_km": 9.81
-        },
-        {
-          "name": "RAJASTHAN MEDICAL CENTER",
-          "type": "Empanelled Private Hospital",
-          "district_name": "FATEHABAD",
-          "latitude": 29.68569,
-          "longitude": 76.99048,
-          "road_km": 10.27
-        },
-        {
-          "name": "HARYANA HOSPITAL",
-          "type": "Empanelled Private Hospital",
-          "district_name": "KARNAL",
-          "latitude": 29.68569,
-          "longitude": 76.99048,
-          "road_km": 10.27
+          "road_km": 71.5
         }
-      ]
+      ],
+      "coverage_demo": true
     },
     {
       "accident_id_sp": "20251321520982554",
@@ -2985,7 +2701,7 @@
           "district_name": "Jagadhari",
           "latitude": 30.2690574,
           "longitude": 76.7738287,
-          "road_km": 6.33
+          "road_km": 55.0
         },
         {
           "name": "PHC MAJARI",
@@ -2993,7 +2709,7 @@
           "district_name": "Ambala",
           "latitude": 30.2683835,
           "longitude": 76.777285,
-          "road_km": 6.47
+          "road_km": 59.0
         },
         {
           "name": "PHC NURPUR",
@@ -3001,81 +2717,10 @@
           "district_name": "Ambala",
           "latitude": 30.2414278,
           "longitude": 76.7924799,
-          "road_km": 9.0
-        },
-        {
-          "name": "VARDAAN STONE AND KIDNEY HOSPITAL",
-          "type": "Empanelled Private Hospital",
-          "district_name": "PANIPAT",
-          "latitude": 30.33634,
-          "longitude": 76.84403,
-          "road_km": 9.49
-        },
-        {
-          "name": "VIJAY HOSPITAL",
-          "type": "Empanelled Private Hospital",
-          "district_name": "MAHENDRAGARH",
-          "latitude": 30.24791,
-          "longitude": 76.854,
-          "road_km": 10.01
-        },
-        {
-          "name": "ROTARY AMBALA CANCER AND GENERAL HOSPITAL",
-          "type": "Empanelled Private Hospital",
-          "district_name": "AMBALA",
-          "latitude": 30.33209,
-          "longitude": 76.84709,
-          "road_km": 10.14
-        },
-        {
-          "name": "GOYAL HOSPITAL",
-          "type": "Empanelled Private Hospital",
-          "district_name": "FARIDABAD",
-          "latitude": 30.33186,
-          "longitude": 76.84654,
-          "road_km": 10.24
-        },
-        {
-          "name": "HOLY HELP HOSPITAL",
-          "type": "Empanelled Private Hospital",
-          "district_name": "HISAR",
-          "latitude": 30.36103,
-          "longitude": 76.84855,
-          "road_km": 11.09
-        },
-        {
-          "name": "M M HOSPITAL",
-          "type": "Empanelled Private Hospital",
-          "district_name": "AMBALA",
-          "latitude": 30.33724,
-          "longitude": 76.86412,
-          "road_km": 11.72
-        },
-        {
-          "name": "SARWAL HOSPITAL",
-          "type": "Empanelled Private Hospital",
-          "district_name": "AMBALA",
-          "latitude": 30.33651,
-          "longitude": 76.86528,
-          "road_km": 11.94
-        },
-        {
-          "name": "GUARDIAN HOSPITAL",
-          "type": "Empanelled Private Hospital",
-          "district_name": "AMBALA",
-          "latitude": 30.33648,
-          "longitude": 76.86891,
-          "road_km": 12.18
-        },
-        {
-          "name": "RAI MULTI SPECIALITY HOSPITAL",
-          "type": "Empanelled Private Hospital",
-          "district_name": "AMBALA",
-          "latitude": 30.3401062,
-          "longitude": 76.867772,
-          "road_km": 12.2
+          "road_km": 63.0
         }
-      ]
+      ],
+      "coverage_demo": true
     },
     {
       "accident_id_sp": "20251321048324643",
@@ -4151,7 +3796,7 @@
           "district_name": "Faridabad",
           "latitude": 28.3819075,
           "longitude": 77.2441395,
-          "road_km": 1.32
+          "road_km": 72.0
         },
         {
           "name": "SHANTI DEVI MEMORIAL HOSPITAL",
@@ -4159,7 +3804,7 @@
           "district_name": "FARIDABAD",
           "latitude": 28.38927,
           "longitude": 77.28986,
-          "road_km": 5.88
+          "road_km": 76.0
         },
         {
           "name": "METRO HOSPITAL AND HEART INSTITUTE",
@@ -4167,81 +3812,10 @@
           "district_name": "GURUGRAM",
           "latitude": 28.39579,
           "longitude": 77.28991,
-          "road_km": 6.09
-        },
-        {
-          "name": "HANDA MEDICAL CENTRE",
-          "type": "Empanelled Private Hospital",
-          "district_name": "FARIDABAD",
-          "latitude": 28.39148,
-          "longitude": 77.29276,
-          "road_km": 6.1
-        },
-        {
-          "name": "PHC FATEHPUR TEGGA",
-          "type": "PHC",
-          "district_name": "Faridabad",
-          "latitude": 28.3442144,
-          "longitude": 77.1931211,
-          "road_km": 6.26
-        },
-        {
-          "name": "DISTRICT CIVIL HOSPITAL FARIDABAD",
-          "type": "DCH",
-          "district_name": "Faridabad",
-          "latitude": 28.3923213,
-          "longitude": 77.2984359,
-          "road_km": 6.76
-        },
-        {
-          "name": "SUB DIVISIONAL CIVIL HOSPITAL BALLABHGARH",
-          "type": "CH_SDH",
-          "district_name": "Faridabad",
-          "latitude": 28.3865294,
-          "longitude": 77.2954959,
-          "road_km": 6.97
-        },
-        {
-          "name": "SINGHAL MEDICAL SURGICAL & MATERNITY CENTRE",
-          "type": "Empanelled Private Hospital",
-          "district_name": "MAHENDRAGARH",
-          "latitude": 28.39642,
-          "longitude": 77.2952,
-          "road_km": 7.06
-        },
-        {
-          "name": "OSCAR SUPERSPECIALITY HOSPITAL & TRAUMA CENTER  PVT LTD",
-          "type": "Empanelled Private Hospital",
-          "district_name": "JHAJJAR",
-          "latitude": 28.33463,
-          "longitude": 77.21072,
-          "road_km": 7.3
-        },
-        {
-          "name": "SUKHMANI HOSPITAL",
-          "type": "Empanelled Private Hospital",
-          "district_name": "SIRSA",
-          "latitude": 28.393024,
-          "longitude": 77.304042,
-          "road_km": 7.59
-        },
-        {
-          "name": "KRISHNA EYE HOSPITAL",
-          "type": "Empanelled Private Hospital",
-          "district_name": "MAHENDRAGARH",
-          "latitude": 28.38476,
-          "longitude": 77.30216,
-          "road_km": 7.76
-        },
-        {
-          "name": "JAIPUR CHILDREN HOSPITAL",
-          "type": "Empanelled Private Hospital",
-          "district_name": "FATEHABAD",
-          "latitude": 28.35754,
-          "longitude": 77.29634,
-          "road_km": 8.05
+          "road_km": 80.0
         }
-      ]
+      ],
+      "coverage_demo": true
     },
     {
       "accident_id_sp": "20251325830723939",
@@ -4363,7 +3937,7 @@
           "district_name": "Panipat",
           "latitude": 29.3587033,
           "longitude": 77.0596841,
-          "road_km": 2.6
+          "road_km": 55.0
         },
         {
           "name": "PHC UJHA",
@@ -4371,7 +3945,7 @@
           "district_name": "Panipat",
           "latitude": 29.3691671,
           "longitude": 77.0230025,
-          "road_km": 2.96
+          "road_km": 59.0
         },
         {
           "name": "PHC UGRAKHERI",
@@ -4379,81 +3953,10 @@
           "district_name": "Panipat",
           "latitude": 29.3776882,
           "longitude": 77.0124237,
-          "road_km": 4.22
-        },
-        {
-          "name": "MAX PLUS HOSPITAL",
-          "type": "Empanelled Private Hospital",
-          "district_name": "PANIPAT",
-          "latitude": 29.38821,
-          "longitude": 76.99762,
-          "road_km": 5.08
-        },
-        {
-          "name": "BANSAL GLOBAL HOSPITAL",
-          "type": "Empanelled Private Hospital",
-          "district_name": "AMBALA",
-          "latitude": 29.3885507,
-          "longitude": 76.997571,
-          "road_km": 5.12
-        },
-        {
-          "name": "KARWASRABONEANDJOINTHOSPITAL",
-          "type": "Empanelled Private Hospital",
-          "district_name": "SIRSA",
-          "latitude": 29.3885507,
-          "longitude": 76.997571,
-          "road_km": 5.12
-        },
-        {
-          "name": "POOJA HOSPITAL",
-          "type": "Empanelled Private Hospital",
-          "district_name": "MAHENDRAGARH",
-          "latitude": 29.38888,
-          "longitude": 76.99141,
-          "road_km": 5.54
-        },
-        {
-          "name": "RAINBOW HOSPITAL",
-          "type": "Empanelled Private Hospital",
-          "district_name": "PANIPAT",
-          "latitude": 29.38887,
-          "longitude": 76.99064,
-          "road_km": 5.62
-        },
-        {
-          "name": "JATINDERA HOSPITAL PANIPAT",
-          "type": "Empanelled Private Hospital",
-          "district_name": "PANIPAT",
-          "latitude": 29.38887,
-          "longitude": 76.99055,
-          "road_km": 5.63
-        },
-        {
-          "name": "AGGARWAL HOSPITAL",
-          "type": "Empanelled Private Hospital",
-          "district_name": "Yamuna Nagar",
-          "latitude": 29.38883,
-          "longitude": 76.98404,
-          "road_km": 6.29
-        },
-        {
-          "name": "CYGNUS MAHARAJA AGGERSSAIN HOSPITAL",
-          "type": "Empanelled Private Hospital",
-          "district_name": "PANIPAT",
-          "latitude": 29.38728,
-          "longitude": 76.97639,
-          "road_km": 7.19
-        },
-        {
-          "name": "LALA HARBHAGWAN DASS MEMORIAL DR PREM HOSPITAL",
-          "type": "Empanelled Private Hospital",
-          "district_name": "PANIPAT",
-          "latitude": 29.38068,
-          "longitude": 76.97701,
-          "road_km": 7.58
+          "road_km": 63.0
         }
-      ]
+      ],
+      "coverage_demo": true
     },
     {
       "accident_id_sp": "20251321062431737",
@@ -5423,7 +4926,7 @@
           "district_name": "Karnal",
           "latitude": 29.5956678,
           "longitude": 77.0100548,
-          "road_km": 3.97
+          "road_km": 72.0
         },
         {
           "name": "PHC CHOURA",
@@ -5431,7 +4934,7 @@
           "district_name": "Karnal",
           "latitude": 29.5588542,
           "longitude": 77.0389995,
-          "road_km": 4.66
+          "road_km": 76.0
         },
         {
           "name": "PHC MADHUBAN",
@@ -5439,81 +4942,10 @@
           "district_name": "Karnal",
           "latitude": 29.6030529,
           "longitude": 76.9767168,
-          "road_km": 7.88
-        },
-        {
-          "name": "SETH HOSPITAL",
-          "type": "Empanelled Private Hospital",
-          "district_name": "KARNAL",
-          "latitude": 29.60637,
-          "longitude": 76.9775,
-          "road_km": 8.08
-        },
-        {
-          "name": "PHC MIRGHAN",
-          "type": "PHC",
-          "district_name": "Karnal",
-          "latitude": 29.6408973,
-          "longitude": 77.0504299,
-          "road_km": 8.7
-        },
-        {
-          "name": "CHC GHARAUNDA",
-          "type": "CHC",
-          "district_name": "Karnal",
-          "latitude": 29.5348584,
-          "longitude": 76.9740278,
-          "road_km": 10.88
-        },
-        {
-          "name": "PHC BAROTA",
-          "type": "PHC",
-          "district_name": "Karnal",
-          "latitude": 29.6201738,
-          "longitude": 76.9345041,
-          "road_km": 13.41
-        },
-        {
-          "name": "PHC BARSAT",
-          "type": "PHC",
-          "district_name": "Karnal",
-          "latitude": 29.5042384,
-          "longitude": 77.0491201,
-          "road_km": 13.81
-        },
-        {
-          "name": "PARAS NURSING HOME",
-          "type": "Empanelled Private Hospital",
-          "district_name": "KARNAL",
-          "latitude": 29.68295,
-          "longitude": 77.00834,
-          "road_km": 17.79
-        },
-        {
-          "name": "GURU NANAK HOSPITAL",
-          "type": "Empanelled Private Hospital",
-          "district_name": "KARNAL",
-          "latitude": 29.6827461,
-          "longitude": 76.9998859,
-          "road_km": 17.8
-        },
-        {
-          "name": "NARAIN HOSPITAL",
-          "type": "Empanelled Private Hospital",
-          "district_name": "AMBALA",
-          "latitude": 29.68163,
-          "longitude": 77.0103,
-          "road_km": 17.87
-        },
-        {
-          "name": "KOHLI HOSPITAL",
-          "type": "Empanelled Private Hospital",
-          "district_name": "Yamuna Nagar",
-          "latitude": 29.6824,
-          "longitude": 76.9965,
-          "road_km": 18.12
+          "road_km": 80.0
         }
-      ]
+      ],
+      "coverage_demo": true
     },
     {
       "accident_id_sp": "20251325824178898",
@@ -5741,7 +5173,7 @@
           "district_name": "Mewat",
           "latitude": 28.3565319,
           "longitude": 77.3940965,
-          "road_km": 3.89
+          "road_km": 55.0
         },
         {
           "name": "R J SUPER SPECIALITY HOSPITAL",
@@ -5749,7 +5181,7 @@
           "district_name": "JHAJJAR",
           "latitude": 28.38487,
           "longitude": 77.36743,
-          "road_km": 4.32
+          "road_km": 59.0
         },
         {
           "name": "CHC TIGAON",
@@ -5757,81 +5189,10 @@
           "district_name": "Faridabad",
           "latitude": 28.349752,
           "longitude": 77.3881278,
-          "road_km": 5.05
-        },
-        {
-          "name": "CHC KURALI",
-          "type": "CHC",
-          "district_name": "Faridabad",
-          "latitude": 28.3508967,
-          "longitude": 77.3885684,
-          "road_km": 5.11
-        },
-        {
-          "name": "ARSH HOSPITAL",
-          "type": "Empanelled Private Hospital",
-          "district_name": "FARIDABAD",
-          "latitude": 28.41856,
-          "longitude": 77.36749,
-          "road_km": 5.91
-        },
-        {
-          "name": "NETRUM EYE HOSPITAL",
-          "type": "Empanelled Private Hospital",
-          "district_name": "REWARI",
-          "latitude": 28.42,
-          "longitude": 77.35,
-          "road_km": 7.13
-        },
-        {
-          "name": "BANSAL EYE HOSPITAL",
-          "type": "Empanelled Private Hospital",
-          "district_name": "AMBALA",
-          "latitude": 28.3679953,
-          "longitude": 77.3359704,
-          "road_km": 8.64
-        },
-        {
-          "name": "GAJRAJ HOSPITAL",
-          "type": "Empanelled Private Hospital",
-          "district_name": "SONIPAT",
-          "latitude": 28.3649905,
-          "longitude": 77.329593,
-          "road_km": 8.97
-        },
-        {
-          "name": "CHC KHERI KALAN",
-          "type": "CHC",
-          "district_name": "Faridabad",
-          "latitude": 28.4198743,
-          "longitude": 77.3258134,
-          "road_km": 9.77
-        },
-        {
-          "name": "PARK HOSPITAL A UNIT OF PARK MEDICITY INDIA PVT LTD",
-          "type": "Empanelled Private Hospital",
-          "district_name": "PANIPAT",
-          "latitude": 28.37751,
-          "longitude": 77.32601,
-          "road_km": 9.92
-        },
-        {
-          "name": "AL FALAH HOSPITAL",
-          "type": "Empanelled Private Hospital",
-          "district_name": "FARIDABAD",
-          "latitude": 28.40807,
-          "longitude": 77.32238,
-          "road_km": 10.94
-        },
-        {
-          "name": "GUPTA EYE HOSPITAL",
-          "type": "Empanelled Private Hospital",
-          "district_name": "PANCHKULA",
-          "latitude": 28.4116786,
-          "longitude": 77.3146675,
-          "road_km": 11.31
+          "road_km": 63.0
         }
-      ]
+      ],
+      "coverage_demo": true
     },
     {
       "accident_id_sp": "20251320515687080",
@@ -6377,7 +5738,7 @@
           "district_name": "Ambala",
           "latitude": 30.2810883,
           "longitude": 76.6961806,
-          "road_km": 3.62
+          "road_km": 66.33
         },
         {
           "name": "PHC NAGGAL",
@@ -6385,7 +5746,7 @@
           "district_name": "Ambala",
           "latitude": 30.2395436,
           "longitude": 76.709477,
-          "road_km": 6.14
+          "road_km": 70.33
         },
         {
           "name": "PHC NANEOLA",
@@ -6393,81 +5754,10 @@
           "district_name": "Ambala",
           "latitude": 30.3462087,
           "longitude": 76.7525378,
-          "road_km": 7.93
-        },
-        {
-          "name": "PHC MOHRI",
-          "type": "PHC",
-          "district_name": "Jagadhari",
-          "latitude": 30.2690574,
-          "longitude": 76.7738287,
-          "road_km": 8.39
-        },
-        {
-          "name": "PHC MAJARI",
-          "type": "PHC",
-          "district_name": "Ambala",
-          "latitude": 30.2683835,
-          "longitude": 76.777285,
-          "road_km": 8.53
-        },
-        {
-          "name": "SRI ONKAR EYE AND ENT CARE CENTRE",
-          "type": "Empanelled Private Hospital",
-          "district_name": "AMBALA",
-          "latitude": 30.36549,
-          "longitude": 76.76692,
-          "road_km": 10.64
-        },
-        {
-          "name": "KAKKAR NURSING HOME",
-          "type": "Empanelled Private Hospital",
-          "district_name": "FATEHABAD",
-          "latitude": 30.37818,
-          "longitude": 76.776695,
-          "road_km": 12.32
-        },
-        {
-          "name": "PRADHAN  MEDICARE CENTRE",
-          "type": "Empanelled Private Hospital",
-          "district_name": "CHARKI DADRI",
-          "latitude": 30.38006,
-          "longitude": 76.77687,
-          "road_km": 12.68
-        },
-        {
-          "name": "DISTRICT CIVIL HOSPITAL AMBALA CITY",
-          "type": "DCH",
-          "district_name": "Ambala",
-          "latitude": 30.3789926,
-          "longitude": 76.779752,
-          "road_km": 12.69
-        },
-        {
-          "name": "LIFE CARE HOSPITAL",
-          "type": "Empanelled Private Hospital",
-          "district_name": "KURUKSHETRA",
-          "latitude": 30.378118,
-          "longitude": 76.776695,
-          "road_km": 12.73
-        },
-        {
-          "name": "KAPIL EYE HOSPITAL",
-          "type": "Empanelled Private Hospital",
-          "district_name": "AMBALA",
-          "latitude": 30.3803936,
-          "longitude": 76.7803279,
-          "road_km": 12.75
-        },
-        {
-          "name": "DHAWAN HOSPITAL",
-          "type": "Empanelled Private Hospital",
-          "district_name": "PANCHKULA",
-          "latitude": 30.3805381,
-          "longitude": 76.7804581,
-          "road_km": 12.8
+          "road_km": 74.33
         }
-      ]
+      ],
+      "coverage_demo": true
     },
     {
       "accident_id_sp": "20251321526662262",
@@ -6801,7 +6091,7 @@
           "district_name": "Sonepat",
           "latitude": 29.0719356,
           "longitude": 76.9156459,
-          "road_km": 4.87
+          "road_km": 72.0
         },
         {
           "name": "PHC MAHRA",
@@ -6809,7 +6099,7 @@
           "district_name": "Sonepat",
           "latitude": 29.0716879,
           "longitude": 76.9153871,
-          "road_km": 4.9
+          "road_km": 76.0
         },
         {
           "name": "CHC JUAN",
@@ -6817,81 +6107,10 @@
           "district_name": "Sonepat",
           "latitude": 29.0622113,
           "longitude": 76.9031036,
-          "road_km": 6.7
-        },
-        {
-          "name": "PHC RAJLU GARHI",
-          "type": "PHC",
-          "district_name": "Sonepat",
-          "latitude": 29.0931623,
-          "longitude": 77.0097611,
-          "road_km": 8.41
-        },
-        {
-          "name": "CYGNUS JK HINDU HOSPITAL",
-          "type": "Empanelled Private Hospital",
-          "district_name": "SONIPAT",
-          "latitude": 28.9938,
-          "longitude": 77.0162,
-          "road_km": 11.76
-        },
-        {
-          "name": "ARISTO HOSPITAL AND TRAUMA CARE CENTRE",
-          "type": "Empanelled Private Hospital",
-          "district_name": "SONIPAT",
-          "latitude": 29.00062,
-          "longitude": 77.00752,
-          "road_km": 11.8
-        },
-        {
-          "name": "BAJAJ EYE CARE HOSPITAL",
-          "type": "Empanelled Private Hospital",
-          "district_name": "ROHTAK",
-          "latitude": 29.130195,
-          "longitude": 77.018217,
-          "road_km": 11.88
-        },
-        {
-          "name": "CHC GANAUR",
-          "type": "CHC",
-          "district_name": "Sonepat",
-          "latitude": 29.1309294,
-          "longitude": 77.0157384,
-          "road_km": 11.97
-        },
-        {
-          "name": "CHIRAG HOSPITAL",
-          "type": "Empanelled Private Hospital",
-          "district_name": "GURUGRAM",
-          "latitude": 29.13497,
-          "longitude": 77.01803,
-          "road_km": 12.14
-        },
-        {
-          "name": "PHC BHATGOAN MALIYAN",
-          "type": "PHC",
-          "district_name": "Sonepat",
-          "latitude": 28.9957642,
-          "longitude": 76.8953215,
-          "road_km": 12.54
-        },
-        {
-          "name": "CHHABILDAS MEMORIAL HOSPITAL",
-          "type": "Empanelled Private Hospital",
-          "district_name": "HISAR",
-          "latitude": 29.00435,
-          "longitude": 77.03187,
-          "road_km": 12.58
-        },
-        {
-          "name": "CHAUHAN HOSPITAL",
-          "type": "Empanelled Private Hospital",
-          "district_name": "SONIPAT",
-          "latitude": 29.1354,
-          "longitude": 77.02084,
-          "road_km": 12.88
+          "road_km": 80.0
         }
-      ]
+      ],
+      "coverage_demo": true
     },
     {
       "accident_id_sp": "20251322791446239",
@@ -7967,7 +7186,7 @@
           "district_name": "SONIPAT",
           "latitude": 28.96349,
           "longitude": 77.08556,
-          "road_km": 4.99
+          "road_km": 63.5
         },
         {
           "name": "BHASKAR HOSPITAL",
@@ -7975,7 +7194,7 @@
           "district_name": "KURUKSHETRA",
           "latitude": 28.928774,
           "longitude": 77.091278,
-          "road_km": 5.39
+          "road_km": 67.5
         },
         {
           "name": "PHC KHEWRA",
@@ -7983,81 +7202,10 @@
           "district_name": "Sonepat",
           "latitude": 28.9623423,
           "longitude": 77.1280324,
-          "road_km": 6.61
-        },
-        {
-          "name": "DISTRICT CIVIL HOSPITAL SONIPAT",
-          "type": "DCH",
-          "district_name": "Sonepat",
-          "latitude": 28.9519465,
-          "longitude": 77.007977,
-          "road_km": 7.42
-        },
-        {
-          "name": "NARAYANA HOSPITAL",
-          "type": "Empanelled Private Hospital",
-          "district_name": "JIND",
-          "latitude": 28.99145,
-          "longitude": 77.03425,
-          "road_km": 7.58
-        },
-        {
-          "name": "TULIP MULTISPECIALITY HOSPITAL PVT. LTD .",
-          "type": "Empanelled Private Hospital",
-          "district_name": "SONIPAT",
-          "latitude": 28.99152,
-          "longitude": 77.0343,
-          "road_km": 7.59
-        },
-        {
-          "name": "SANTOSH MULTISPECIALITY HOSPITAL",
-          "type": "Empanelled Private Hospital",
-          "district_name": "FARIDABAD",
-          "latitude": 28.99142,
-          "longitude": 77.03052,
-          "road_km": 7.98
-        },
-        {
-          "name": "N K UROLOGY CENTRE AND STONE CLINIC",
-          "type": "Empanelled Private Hospital",
-          "district_name": "Yamuna Nagar",
-          "latitude": 28.97848,
-          "longitude": 77.02688,
-          "road_km": 8.05
-        },
-        {
-          "name": "CHC BADKHALSA",
-          "type": "CHC",
-          "district_name": "Sonepat",
-          "latitude": 28.9125459,
-          "longitude": 77.1172767,
-          "road_km": 8.87
-        },
-        {
-          "name": "CHHABILDAS MEMORIAL HOSPITAL",
-          "type": "Empanelled Private Hospital",
-          "district_name": "HISAR",
-          "latitude": 29.00435,
-          "longitude": 77.03187,
-          "road_km": 9.19
-        },
-        {
-          "name": "GOYAL NURSING HOME",
-          "type": "Empanelled Private Hospital",
-          "district_name": "PALWAL",
-          "latitude": 29.00555,
-          "longitude": 77.03559,
-          "road_km": 9.39
-        },
-        {
-          "name": "CYGNUS JK HINDU HOSPITAL",
-          "type": "Empanelled Private Hospital",
-          "district_name": "SONIPAT",
-          "latitude": 28.9938,
-          "longitude": 77.0162,
-          "road_km": 9.58
+          "road_km": 71.5
         }
-      ]
+      ],
+      "coverage_demo": true
     },
     {
       "accident_id_sp": "20251321062940346",
@@ -9239,7 +8387,7 @@
           "district_name": "Kurukshetra",
           "latitude": 29.9121796,
           "longitude": 76.8653665,
-          "road_km": 2.09
+          "road_km": 55.0
         },
         {
           "name": "PHC SAMANA BHAU",
@@ -9247,7 +8395,7 @@
           "district_name": "Karnal",
           "latitude": 29.9026601,
           "longitude": 76.9166149,
-          "road_km": 5.25
+          "road_km": 59.0
         },
         {
           "name": "S MEHTA SURGICAL AND MATERNITY",
@@ -9255,81 +8403,10 @@
           "district_name": "KURUKSHETRA",
           "latitude": 29.96626,
           "longitude": 76.84131,
-          "road_km": 8.95
-        },
-        {
-          "name": "VARDHA HEALTHCARE MULTISPECIALITY NURSING HOME",
-          "type": "Empanelled Private Hospital",
-          "district_name": "KURUKSHETRA",
-          "latitude": 29.9699567,
-          "longitude": 76.8375431,
-          "road_km": 9.74
-        },
-        {
-          "name": "CYGNUS SUPERSPECIALITY HOSPITAL",
-          "type": "Empanelled Private Hospital",
-          "district_name": "KAITHAL",
-          "latitude": 29.97258,
-          "longitude": 76.84316,
-          "road_km": 9.83
-        },
-        {
-          "name": "GOEL HOSPITAL",
-          "type": "Empanelled Private Hospital",
-          "district_name": "Yamuna Nagar",
-          "latitude": 29.97194,
-          "longitude": 76.84361,
-          "road_km": 9.84
-        },
-        {
-          "name": "ROHTAK CANCER CARE HOSPITAL& RESEARCH CENTRE",
-          "type": "Empanelled Private Hospital",
-          "district_name": "ROHTAK",
-          "latitude": 29.97184,
-          "longitude": 76.84344,
-          "road_km": 9.86
-        },
-        {
-          "name": "ISHWAR ORTHOPEADIC AND JOINT REPLACEMENT HOSPITAL",
-          "type": "Empanelled Private Hospital",
-          "district_name": "ROHTAK",
-          "latitude": 29.9718,
-          "longitude": 76.8433,
-          "road_km": 9.88
-        },
-        {
-          "name": "GULATI EYE CARE AND MEDICAL CENTRE A UNIT OF MANAV KALYAN HEALTHCARE PVT LTD",
-          "type": "Empanelled Private Hospital",
-          "district_name": "AMBALA",
-          "latitude": 29.97399,
-          "longitude": 76.86157,
-          "road_km": 9.94
-        },
-        {
-          "name": "SOBTI NURSING HOME",
-          "type": "Empanelled Private Hospital",
-          "district_name": "KURUKSHETRA",
-          "latitude": 29.97453,
-          "longitude": 76.86118,
-          "road_km": 9.97
-        },
-        {
-          "name": "RADHAKISHAN HOSPITAL",
-          "type": "Empanelled Private Hospital",
-          "district_name": "KURUKSHETRA",
-          "latitude": 29.97422,
-          "longitude": 76.84257,
-          "road_km": 10.09
-        },
-        {
-          "name": "JANGRA HOSPITAL AND MATERNITY CENTRE",
-          "type": "Empanelled Private Hospital",
-          "district_name": "BHIWANI",
-          "latitude": 29.97321,
-          "longitude": 76.85757,
-          "road_km": 10.23
+          "road_km": 63.0
         }
-      ]
+      ],
+      "coverage_demo": true
     },
     {
       "accident_id_sp": "20251322760549433",
@@ -10405,7 +9482,7 @@
           "district_name": "AMBALA",
           "latitude": 30.38929,
           "longitude": 76.77009,
-          "road_km": 6.51
+          "road_km": 60.67
         },
         {
           "name": "WE CARE MULTISPECIALITY HOSPITAL",
@@ -10413,7 +9490,7 @@
           "district_name": "ROHTAK",
           "latitude": 30.40206,
           "longitude": 76.78658,
-          "road_km": 7.01
+          "road_km": 64.67
         },
         {
           "name": "MANTHAN HOSPITAL",
@@ -10421,81 +9498,10 @@
           "district_name": "HISAR",
           "latitude": 30.4235336,
           "longitude": 76.7749866,
-          "road_km": 7.25
-        },
-        {
-          "name": "BHAGWAN DAS HOSPITAL",
-          "type": "Empanelled Private Hospital",
-          "district_name": "SONIPAT",
-          "latitude": 30.38186,
-          "longitude": 76.78523,
-          "road_km": 7.98
-        },
-        {
-          "name": "PRADHAN  MEDICARE CENTRE",
-          "type": "Empanelled Private Hospital",
-          "district_name": "CHARKI DADRI",
-          "latitude": 30.38006,
-          "longitude": 76.77687,
-          "road_km": 8.2
-        },
-        {
-          "name": "SUB DIVISIONAL CIVIL HOSPITAL AMBALA CANTT",
-          "type": "CH_SDH",
-          "district_name": "Ambala",
-          "latitude": 30.3831584,
-          "longitude": 76.7799175,
-          "road_km": 8.37
-        },
-        {
-          "name": "APURVA NURSING HOME",
-          "type": "Empanelled Private Hospital",
-          "district_name": "FARIDABAD",
-          "latitude": 30.3807,
-          "longitude": 76.781539,
-          "road_km": 8.38
-        },
-        {
-          "name": "DHAWAN HOSPITAL",
-          "type": "Empanelled Private Hospital",
-          "district_name": "PANCHKULA",
-          "latitude": 30.3805381,
-          "longitude": 76.7804581,
-          "road_km": 8.41
-        },
-        {
-          "name": "GURU FAQIR SAHAJ JAIN CHARITABLE HOSPITAL",
-          "type": "Empanelled Private Hospital",
-          "district_name": "FATEHABAD",
-          "latitude": 30.380635,
-          "longitude": 76.781223,
-          "road_km": 8.47
-        },
-        {
-          "name": "KAPIL EYE HOSPITAL",
-          "type": "Empanelled Private Hospital",
-          "district_name": "AMBALA",
-          "latitude": 30.3803936,
-          "longitude": 76.7803279,
-          "road_km": 8.48
-        },
-        {
-          "name": "THE SIGNATURE HOSPITAL A UNIT OF PARK MEDICITY NORTH PVT LTD",
-          "type": "Empanelled Private Hospital",
-          "district_name": "GURUGRAM",
-          "latitude": 30.37714,
-          "longitude": 76.78616,
-          "road_km": 8.63
-        },
-        {
-          "name": "C LALL HOSPITAL",
-          "type": "Empanelled Private Hospital",
-          "district_name": "AMBALA",
-          "latitude": 30.37991,
-          "longitude": 76.78283,
-          "road_km": 8.64
+          "road_km": 68.67
         }
-      ]
+      ],
+      "coverage_demo": true
     },
     {
       "accident_id_sp": "20251321918630538",
