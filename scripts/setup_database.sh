@@ -49,13 +49,23 @@ else
   echo "==> Grid cells already present ($GRID_COUNT rows)"
 fi
 
-GEO_TABLE=$("${PSQL[@]}" -tAc "SELECT COUNT(*) FROM information_schema.tables WHERE table_schema='public' AND table_name='haryana_ambulance';" | tr -d ' ')
-if [[ "$GEO_TABLE" == "0" ]]; then
+# Guard on the ROW COUNT, not just table existence. A previous load that
+# half-failed (e.g. a malformed COPY row aborting under ON_ERROR_STOP) can
+# leave these tables created-but-empty; checking only existence would then
+# skip the reload forever and the facility layers would silently show 0.
+# A missing table makes this query error, which we treat as "0 rows -> load".
+GEO_ROWS=$("${PSQL[@]}" -tAc "SELECT COUNT(*) FROM public.haryana_ambulance;" 2>/dev/null | tr -d ' ' || true)
+[[ -z "$GEO_ROWS" ]] && GEO_ROWS=0
+if [[ "$GEO_ROWS" == "0" ]]; then
   echo "==> Loading Haryana geolocations (ambulance, blood banks, hospitals)..."
+  # Drop first so the dump's CREATE TABLE statements (no IF NOT EXISTS) re-run
+  # cleanly even when empty tables are left over from a half-failed load.
+  "${PSQL[@]}" -c "DROP TABLE IF EXISTS public.haryana_ambulance, public.haryana_bloodbanks, public.haryana_hosp CASCADE;"
   sanitize_sql geolocations.sql | "${PSQL[@]}"
-else
   AMB=$("${PSQL[@]}" -tAc 'SELECT COUNT(*) FROM public.haryana_ambulance;' | tr -d ' ')
-  echo "==> Geolocation tables already loaded ($AMB ambulances)"
+  echo "==> Loaded geolocations ($AMB ambulances)"
+else
+  echo "==> Geolocation tables already loaded ($GEO_ROWS ambulances)"
 fi
 
 "${PSQL[@]}" -f scripts/sql/004_geolocations_indexes.sql
