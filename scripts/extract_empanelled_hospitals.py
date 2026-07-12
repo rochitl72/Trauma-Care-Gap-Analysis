@@ -36,6 +36,25 @@ def main() -> int:
         return 1
 
     count = collection.get("properties", {}).get("count", len(collection.get("features", [])))
+
+    # Safety: these rows have been physically removed from geolocations.sql, so
+    # a live DB loaded from the current dump returns 0 here. Never overwrite an
+    # existing backup with fewer records than it already holds — that would
+    # silently destroy the preserved data.
+    if os.path.exists(OUTPUT_PATH):
+        try:
+            existing = len(json.load(open(OUTPUT_PATH, encoding="utf-8")).get("features", []))
+        except (ValueError, OSError):
+            existing = 0
+        if count < existing:
+            print(
+                f"Refusing to overwrite {OUTPUT_PATH}: DB has {count} record(s) "
+                f"but the existing backup holds {existing}. The empanelled rows "
+                f"are already removed from the dataset; backup left untouched.",
+                file=sys.stderr,
+            )
+            return 0
+
     os.makedirs(os.path.dirname(OUTPUT_PATH), exist_ok=True)
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
         json.dump(collection, f, ensure_ascii=False, indent=2)
