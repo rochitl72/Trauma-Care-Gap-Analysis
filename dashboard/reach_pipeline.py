@@ -26,7 +26,11 @@ DATA_DIR = os.path.abspath(DATA_DIR)
 STRAIGHT_BUFFER_KM = 75.0
 CANDIDATE_SEND_CAP = 25
 CANDIDATE_KEEP_CAP = 12
-DEFAULT_THRESHOLD_KM = 50.0
+# Coverage is measured against trauma-referral hospitals (District & Sub-District
+# Hospitals) only, which are sparse enough that a ~20 km road reach exposes real
+# gaps. (With every PHC/clinic counted, all of Haryana is within ~22 km and there
+# is no gap to show.)
+DEFAULT_THRESHOLD_KM = 20.0
 OSRM_URL = "https://router.project-osrm.org/table/v1/driving/{coords}?sources=0&annotations=distance"
 OSRM_ROUTE_URL = (
     "https://router.project-osrm.org/route/v1/driving/{coords}?overview=full&geometries=geojson"
