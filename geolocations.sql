@@ -105,7 +105,7 @@ ALTER TABLE ONLY public.haryana_hosp ALTER COLUMN s_no SET DEFAULT nextval('publ
 
 
 COPY public.haryana_ambulance (s_no, district_name, vehicle_no, vehicle_make, vehicle_type, stationed_at, health_facility_name, latitude, longitude) FROM stdin;
-﻿1	Ambala	HR37D-2809	TataWinger	BLS	Civil Hospital	AMABAL CITY	30.3781523	76.7799969
+1	Ambala	HR37D-2809	TataWinger	BLS	Civil Hospital	AMABAL CITY	30.3781523	76.7799969
 2	Ambala	HR37D-6765	TataWinger	BLS	CHC	SHAZADPUR	30.4513975	77.0228178
 3	Ambala	HR37D-9859	TataWinger	BLS	CHC	MULLANA	30.2781774	77.0499105
 4	Ambala	HR37D-5299	TataWinger	BLS	PHC	BIHTA	30.3781838	76.7766924
@@ -444,8 +444,7 @@ COPY public.haryana_ambulance (s_no, district_name, vehicle_no, vehicle_make, ve
 337	Narnaul	HR-66B-3328	Tata Winger	BLS	CHC	SATNALI	28.378224	75.964095
 338	Narnaul	HR-66B-3371	Tata Winger	ALS	CHC	KANINA	28.330451	76.305696
 339	Narnaul	HR-66B-5653	Tata Winger	BLS	CHC	ATELI	28.101727	76.260626
-340	Narnaul	HR-66B-7190	Tata Winger	BLS	SDH	MAHENDRAGARH	28.273668	76.150
-296
+340	Narnaul	HR-66B-7190	Tata Winger	BLS	SDH	MAHENDRAGARH	28.273668	76.150296
 341	Narnaul	HR66B2893	Tata Winger	BLS	SDH	MAHENDRAGARH	28.273668	76.150296
 342	Narnaul	HR66B8820	Tata Winger	BLS	CHC	NANGAL CHOUDHARY	27.884056	76.120144
 343	Narnaul	HR66B1965	Tata Winger	BLS	Civil Hospital	NARNAUL	28.042943	76.115005
@@ -676,7 +675,7 @@ COPY public.haryana_ambulance (s_no, district_name, vehicle_no, vehicle_make, ve
 567	Yamunanagar	HR58C0218	Tata Winger	PTA	PHC	Rasulpur	30.4345	77.2161
 568	Yamunanagar	HR58C5021	Tata Winger	PTA	CHC	Chhachrauli	30.2733	77.5058
 569	Yamunanagar	HR58C4825	Tata Winger	PTA	SDH	Jagadhari	30.16975	77.30573
-﻿1	Ambala	HR37D-2809	TataWinger	BLS	Civil Hospital	AMABAL CITY	30.3781523	76.7799969
+1	Ambala	HR37D-2809	TataWinger	BLS	Civil Hospital	AMABAL CITY	30.3781523	76.7799969
 2	Ambala	HR37D-6765	TataWinger	BLS	CHC	SHAZADPUR	30.4513975	77.0228178
 3	Ambala	HR37D-9859	TataWinger	BLS	CHC	MULLANA	30.2781774	77.0499105
 4	Ambala	HR37D-5299	TataWinger	BLS	PHC	BIHTA	30.3781838	76.7766924
@@ -1252,7 +1251,7 @@ COPY public.haryana_ambulance (s_no, district_name, vehicle_no, vehicle_make, ve
 
 
 COPY public.haryana_bloodbanks (s_no, district_name, blood_centre_name, blood_centre_address, latitude, longitude) FROM stdin;
-﻿1	Ambala	Blood Centre M/s Philadelphia Hospital	Post Box No. 40 Ambala City	30.38208	76.7828
+1	Ambala	Blood Centre M/s Philadelphia Hospital	Post Box No. 40 Ambala City	30.38208	76.7828
 2	Ambala	Blood Centre M/s M.M. Institute of Medical Science and Research	M.M. Institute of Medical Science and Research Mullana Ambala	30.25069	77.04989
 3	Ambala	Blood Centre M/s Healing Touch Super Speciality Hospital	Ambala Chandigarh Highway Ambala	30.40203	76.78656
 4	Ambala	Blood Centre M/s Sanjeevani	#8 AKS Building 1st Floor Near Yafe Indoor Hospital Ambala City	30.36296	76.79393
