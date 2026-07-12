@@ -59,10 +59,6 @@ const FIELD_LABELS = {
   layer: "Layer",
 };
 
-// Hospital types withheld from the map. Kept in sync with db.EXCLUDED_HOSP_TYPES
-// on the backend (which is the primary filter); this is a defensive fallback.
-const EXCLUDED_HOSP_TYPES = new Set(["Empanelled Private Hospital"]);
-
 const stateStyle = {
   color: "#22c55e",
   weight: 2,
@@ -180,16 +176,6 @@ async function loadGeoLayer(layerName, layerGroup, icon, label) {
 
   const response = await fetch(`/api/geolocations/${layerName}?${params.toString()}`);
   const data = await response.json();
-
-  // Defensive second layer: the backend already withholds these hospital types
-  // (db.EXCLUDED_HOSP_TYPES), but drop them here too so they can never reach the
-  // map even if the API is ever changed to return them.
-  if (layerName === "hospitals" && Array.isArray(data.features)) {
-    data.features = data.features.filter(
-      (f) => !EXCLUDED_HOSP_TYPES.has((f.properties || {}).hosp_type)
-    );
-  }
-
   layerGroup.clearLayers();
 
   const layer = L.geoJSON(data, {

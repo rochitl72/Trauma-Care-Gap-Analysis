@@ -261,15 +261,6 @@ def _district_match_sql(column: str = "district_name") -> str:
     )"""
 
 
-# Hospital types intentionally withheld from the public map layer. These
-# records are NOT deleted — they stay in public.haryana_hosp and are exported
-# to data/hospitals_empanelled_private.json (see
-# scripts/extract_empanelled_hospitals.py) as a backup. They're simply filtered
-# out of the /api/geolocations/hospitals response so they never reach the
-# frontend map. As of the current dataset this withholds 614 hospitals.
-EXCLUDED_HOSP_TYPES: list[str] = ["Empanelled Private Hospital"]
-
-
 GEOLOCATION_LAYERS: dict[str, dict[str, Any]] = {
     "ambulance": {
         "table": "public.haryana_ambulance",
@@ -303,9 +294,6 @@ GEOLOCATION_LAYERS: dict[str, dict[str, Any]] = {
             ("hosp_type", "hosp_type"),
         ],
         "label": "Hospital",
-        # Rows whose hosp_type is in this list are withheld from the map layer.
-        "type_column": "hosp_type",
-        "exclude_types": EXCLUDED_HOSP_TYPES,
     },
 }
 
@@ -329,21 +317,15 @@ def geolocations_summary() -> dict:
         SELECT
             (SELECT COUNT(*) FROM public.haryana_ambulance) AS ambulance,
             (SELECT COUNT(*) FROM public.haryana_bloodbanks) AS bloodbanks,
-            (SELECT COUNT(*) FROM public.haryana_hosp
-                WHERE NOT (COALESCE(hosp_type, '') = ANY(%(excluded)s))) AS hospitals,
-            (SELECT COUNT(*) FROM public.haryana_hosp
-                WHERE COALESCE(hosp_type, '') = ANY(%(excluded)s)) AS hospitals_excluded
-        """,
-        {"excluded": list(EXCLUDED_HOSP_TYPES)},
+            (SELECT COUNT(*) FROM public.haryana_hosp) AS hospitals
+        """
     )
     return {
         "available": True,
         "state": "Haryana",
         "ambulance": counts["ambulance"] if counts else 0,
         "bloodbanks": counts["bloodbanks"] if counts else 0,
-        # 'hospitals' reflects what the map shows (excluded types withheld).
         "hospitals": counts["hospitals"] if counts else 0,
-        "hospitals_excluded": counts["hospitals_excluded"] if counts else 0,
     }
 
 
@@ -369,14 +351,6 @@ def geolocation_geojson(
     prop_sql = ", ".join(f"'{label}', {col}" for label, col in cfg["properties"])
     district_sql = _district_match_sql()
 
-    params: dict[str, Any] = {"district": district}
-    exclude_sql = ""
-    if cfg.get("exclude_types") and cfg.get("type_column"):
-        # Withhold configured types (e.g. Empanelled Private Hospitals) from the
-        # map layer without deleting them from the table.
-        exclude_sql = f"AND NOT (COALESCE({cfg['type_column']}, '') = ANY(%(exclude_types)s))"
-        params["exclude_types"] = list(cfg["exclude_types"])
-
     row = fetch_one(
         f"""
         SELECT json_build_object(
@@ -399,9 +373,8 @@ def geolocation_geojson(
         WHERE latitude IS NOT NULL
           AND longitude IS NOT NULL
           AND {district_sql}
-          {exclude_sql}
         """,
-        params,
+        {"district": district},
     )
 
     collection = row["collection"] if row else {"type": "FeatureCollection", "features": []}
@@ -410,52 +383,5 @@ def geolocation_geojson(
         "count": row["cnt"] if row else 0,
         "state": "Haryana",
         "source": "geolocations.sql",
-    }
-    return collection
-
-
-def excluded_hospitals_geojson() -> dict:
-    """The hospitals withheld from the public map layer (EXCLUDED_HOSP_TYPES),
-    returned as a GeoJSON FeatureCollection for backup/audit.
-
-    These rows are NOT removed from public.haryana_hosp — this is a read-only
-    extract so the data is preserved both in the table and in the exported file
-    (scripts/extract_empanelled_hospitals.py writes it to /data).
-    """
-    if not geolocations_available():
-        return {"type": "FeatureCollection", "features": [], "error": "Geolocation data not loaded"}
-
-    cfg = GEOLOCATION_LAYERS["hospitals"]
-    prop_sql = ", ".join(f"'{label}', {col}" for label, col in cfg["properties"])
-    row = fetch_one(
-        f"""
-        SELECT json_build_object(
-            'type', 'FeatureCollection',
-            'features', COALESCE(json_agg(
-                json_build_object(
-                    'type', 'Feature',
-                    'properties', json_build_object({prop_sql}, 'layer', 'hospitals'),
-                    'geometry', ST_AsGeoJSON(
-                        ST_SetSRID(ST_MakePoint(longitude, latitude), 4326)
-                    )::json
-                )
-            ), '[]'::json)
-        ) AS collection,
-        COUNT(*) AS cnt
-        FROM {cfg["table"]}
-        WHERE latitude IS NOT NULL
-          AND longitude IS NOT NULL
-          AND COALESCE(hosp_type, '') = ANY(%(excluded)s)
-        """,
-        {"excluded": list(EXCLUDED_HOSP_TYPES)},
-    )
-
-    collection = row["collection"] if row else {"type": "FeatureCollection", "features": []}
-    collection["properties"] = {
-        "layer": "hospitals_excluded",
-        "count": row["cnt"] if row else 0,
-        "excluded_types": list(EXCLUDED_HOSP_TYPES),
-        "state": "Haryana",
-        "note": "Withheld from the public map layer; preserved here and in public.haryana_hosp.",
     }
     return collection

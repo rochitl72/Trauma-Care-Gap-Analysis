@@ -26,10 +26,7 @@ DATA_DIR = os.path.abspath(DATA_DIR)
 STRAIGHT_BUFFER_KM = 75.0
 CANDIDATE_SEND_CAP = 25
 CANDIDATE_KEEP_CAP = 12
-# Coverage is measured against the 22 District Hospitals only. At that spacing a
-# ~30 km road reach exposes real, spatially-varied coverage gaps (green pockets
-# around each district hospital, red between them) rather than one clean blob.
-DEFAULT_THRESHOLD_KM = 30.0
+DEFAULT_THRESHOLD_KM = 50.0
 OSRM_URL = "https://router.project-osrm.org/table/v1/driving/{coords}?sources=0&annotations=distance"
 OSRM_ROUTE_URL = (
     "https://router.project-osrm.org/route/v1/driving/{coords}?overview=full&geometries=geojson"
