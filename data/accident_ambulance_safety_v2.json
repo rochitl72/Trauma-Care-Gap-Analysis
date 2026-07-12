@@ -1,13 +1,14 @@
 {
   "schema": "v2",
-  "default_threshold_km": 50.0,
+  "default_threshold_km": 20.0,
   "max_threshold_km": 75.0,
+  "generated_at": "2026-07-12T13:47:12.924771+00:00",
   "features": [
     {
       "accident_id_sp": "20251321918207473",
       "latitude": 29.036579089957,
       "longitude": 76.969180534,
-      "severity": "Grievous Injury",
+      "severity": "Fatal",
       "district_name": "SONIPAT",
       "station_name": "SADAR SONIPAT",
       "candidates": [
@@ -113,7 +114,7 @@
       "accident_id_sp": "20251321338731262",
       "latitude": 29.306620882307,
       "longitude": 76.890365143,
-      "severity": "Grievous Injury",
+      "severity": "Fatal",
       "district_name": "PANIPAT",
       "station_name": "MODEL TOWN",
       "candidates": [
@@ -219,7 +220,7 @@
       "accident_id_sp": "20251322791571029",
       "latitude": 28.498383530326,
       "longitude": 77.062838495,
-      "severity": "Minor Injury Hospitalized",
+      "severity": "Fatal",
       "district_name": "GURUGRAM",
       "station_name": "SECTOR-40",
       "candidates": [
@@ -325,7 +326,7 @@
       "accident_id_sp": "20251321513391369",
       "latitude": 29.732285326083,
       "longitude": 76.929238677,
-      "severity": "Minor Injury Hospitalized",
+      "severity": "Fatal",
       "district_name": "KARNAL",
       "station_name": "CITY KARNAL",
       "candidates": [
@@ -537,7 +538,7 @@
       "accident_id_sp": "20251320521662275",
       "latitude": 30.147670685646,
       "longitude": 77.322683089,
-      "severity": "Minor Injury Non-Hospitalized",
+      "severity": "Fatal",
       "district_name": "YAMUNANAGAR",
       "station_name": "CHHACHHRAULI",
       "candidates": [
@@ -643,7 +644,7 @@
       "accident_id_sp": "20251321940479201",
       "latitude": 28.917284035654,
       "longitude": 76.977872091,
-      "severity": "Minor Injury Hospitalized",
+      "severity": "Fatal",
       "district_name": "SONIPAT",
       "station_name": "RAI",
       "candidates": [
@@ -749,7 +750,7 @@
       "accident_id_sp": "20251320110183667",
       "latitude": 30.612448389058,
       "longitude": 76.81162169,
-      "severity": "Grievous Injury",
+      "severity": "Fatal",
       "district_name": "PANCHKULA",
       "station_name": "SECTOR-5",
       "candidates": [
@@ -855,7 +856,7 @@
       "accident_id_sp": "20251320311270555",
       "latitude": 30.356622720507,
       "longitude": 76.768313854,
-      "severity": "Minor Injury Non-Hospitalized",
+      "severity": "Fatal",
       "district_name": "AMBALA",
       "station_name": "CITY AMBALA",
       "candidates": [
@@ -961,7 +962,7 @@
       "accident_id_sp": "20251320521779514",
       "latitude": 30.076711265539,
       "longitude": 77.225456008,
-      "severity": "Non-Injury",
+      "severity": "Fatal",
       "district_name": "YAMUNANAGAR",
       "station_name": "CHHACHHRAULI",
       "candidates": [
@@ -1067,7 +1068,7 @@
       "accident_id_sp": "20251321322383060",
       "latitude": 29.397045177865,
       "longitude": 76.917565967,
-      "severity": "Minor Injury Hospitalized",
+      "severity": "Fatal",
       "district_name": "PANIPAT",
       "station_name": "SAMALKHA",
       "candidates": [
@@ -1173,7 +1174,7 @@
       "accident_id_sp": "20251320323133659",
       "latitude": 30.439913345634,
       "longitude": 76.826379984,
-      "severity": "Grievous Injury",
+      "severity": "Fatal",
       "district_name": "AMBALA",
       "station_name": "NARAINGARH",
       "candidates": [
@@ -1279,7 +1280,7 @@
       "accident_id_sp": "20251322233852787",
       "latitude": 28.853693357676,
       "longitude": 76.554576912,
-      "severity": "Non-Injury",
+      "severity": "Fatal",
       "district_name": "ROHTAK",
       "station_name": "MODEL TOWN",
       "candidates": [
@@ -1385,7 +1386,7 @@
       "accident_id_sp": "20251322220581141",
       "latitude": 28.923478959753,
       "longitude": 76.587813742,
-      "severity": "Non-Injury",
+      "severity": "Fatal",
       "district_name": "ROHTAK",
       "station_name": "SAMPLA",
       "candidates": [
@@ -1491,7 +1492,7 @@
       "accident_id_sp": "20251323622883300",
       "latitude": 28.134733457515,
       "longitude": 76.663898017,
-      "severity": "Minor Injury Hospitalized",
+      "severity": "Fatal",
       "district_name": "REWARI",
       "station_name": "BAWAL",
       "candidates": [
@@ -1597,7 +1598,7 @@
       "accident_id_sp": "20251324427634277",
       "latitude": 28.779392090925,
       "longitude": 76.081677737,
-      "severity": "Non-Injury",
+      "severity": "Fatal",
       "district_name": "BHIWANI",
       "station_name": "SIWANI",
       "candidates": [
@@ -1703,7 +1704,7 @@
       "accident_id_sp": "20251324613267753",
       "latitude": 29.578140788356,
       "longitude": 75.092998524,
-      "severity": "Grievous Injury",
+      "severity": "Fatal",
       "district_name": "SIRSA",
       "station_name": "CITY SIRSA",
       "candidates": [
@@ -1809,7 +1810,7 @@
       "accident_id_sp": "20251324427654816",
       "latitude": 28.718934987107,
       "longitude": 76.110891472,
-      "severity": "Non-Injury",
+      "severity": "Fatal",
       "district_name": "BHIWANI",
       "station_name": "SIWANI",
       "candidates": [
@@ -1915,7 +1916,7 @@
       "accident_id_sp": "20251321513887352",
       "latitude": 29.718151013846,
       "longitude": 76.921119314,
-      "severity": "Minor Injury Non-Hospitalized",
+      "severity": "Fatal",
       "district_name": "KARNAL",
       "station_name": "CITY KARNAL",
       "candidates": [
@@ -2021,7 +2022,7 @@
       "accident_id_sp": "20251321526857168",
       "latitude": 29.615779391247,
       "longitude": 76.978757745,
-      "severity": "Minor Injury Hospitalized",
+      "severity": "Fatal",
       "district_name": "KARNAL",
       "station_name": "NILOKHERI",
       "candidates": [
@@ -2127,7 +2128,7 @@
       "accident_id_sp": "20251321520982554",
       "latitude": 29.687082701429,
       "longitude": 76.919653948,
-      "severity": "Minor Injury Hospitalized",
+      "severity": "Fatal",
       "district_name": "KARNAL",
       "station_name": "GHARAUNDA",
       "candidates": [
@@ -2233,7 +2234,7 @@
       "accident_id_sp": "20251320116656116",
       "latitude": 30.671504493466,
       "longitude": 76.799678826,
-      "severity": "Non-Injury",
+      "severity": "Fatal",
       "district_name": "PANCHKULA",
       "station_name": "KALKA",
       "candidates": [
@@ -2339,7 +2340,7 @@
       "accident_id_sp": "20251322745972064",
       "latitude": 28.457449027445,
       "longitude": 76.956736191,
-      "severity": "Grievous Injury",
+      "severity": "Fatal",
       "district_name": "GURUGRAM",
       "station_name": "PALAM VIHAR",
       "candidates": [
@@ -2445,7 +2446,7 @@
       "accident_id_sp": "20251324024189814",
       "latitude": 29.069626529969,
       "longitude": 75.789741728,
-      "severity": "Non-Injury",
+      "severity": "Fatal",
       "district_name": "HISAR",
       "station_name": "HANSI",
       "candidates": [
@@ -2551,7 +2552,7 @@
       "accident_id_sp": "20251324613791798",
       "latitude": 29.618137208862,
       "longitude": 75.033887111,
-      "severity": "Grievous Injury",
+      "severity": "Fatal",
       "district_name": "SIRSA",
       "station_name": "CITY SIRSA",
       "candidates": [
@@ -2657,7 +2658,7 @@
       "accident_id_sp": "20251324626322086",
       "latitude": 29.471822852615,
       "longitude": 75.032981282,
-      "severity": "Minor Injury Hospitalized",
+      "severity": "Fatal",
       "district_name": "SIRSA",
       "station_name": "ELLENABAD",
       "candidates": [
@@ -2763,7 +2764,7 @@
       "accident_id_sp": "20251320121642717",
       "latitude": 30.676018614,
       "longitude": 76.891503653,
-      "severity": "Grievous Injury",
+      "severity": "Fatal",
       "district_name": "PANCHKULA",
       "station_name": "PINJORE",
       "candidates": [
@@ -3081,7 +3082,7 @@
       "accident_id_sp": "20251321048324643",
       "latitude": 28.33165432298,
       "longitude": 77.270640834,
-      "severity": "Minor Injury Hospitalized",
+      "severity": "Fatal",
       "district_name": "FARIDABAD",
       "station_name": "BALLABGARH",
       "candidates": [
@@ -3187,7 +3188,7 @@
       "accident_id_sp": "20251323627198907",
       "latitude": 28.153339503631,
       "longitude": 76.61493513,
-      "severity": "Minor Injury Hospitalized",
+      "severity": "Fatal",
       "district_name": "REWARI",
       "station_name": "DHARUHERA",
       "candidates": [
@@ -3293,7 +3294,7 @@
       "accident_id_sp": "20251321940156802",
       "latitude": 28.966873561986,
       "longitude": 76.99909841,
-      "severity": "Minor Injury Non-Hospitalized",
+      "severity": "Fatal",
       "district_name": "SONIPAT",
       "station_name": "RAI",
       "candidates": [
@@ -3399,7 +3400,7 @@
       "accident_id_sp": "20251321918360735",
       "latitude": 28.975571830778,
       "longitude": 76.986174469,
-      "severity": "Minor Injury Non-Hospitalized",
+      "severity": "Fatal",
       "district_name": "SONIPAT",
       "station_name": "SADAR SONIPAT",
       "candidates": [
@@ -3505,7 +3506,7 @@
       "accident_id_sp": "20251320116585100",
       "latitude": 30.700731435704,
       "longitude": 76.795832813,
-      "severity": "Grievous Injury",
+      "severity": "Fatal",
       "district_name": "PANCHKULA",
       "station_name": "KALKA",
       "candidates": [
@@ -3611,7 +3612,7 @@
       "accident_id_sp": "20251320311153045",
       "latitude": 30.36796353411,
       "longitude": 76.841742839,
-      "severity": "Minor Injury Hospitalized",
+      "severity": "Fatal",
       "district_name": "AMBALA",
       "station_name": "CITY AMBALA",
       "candidates": [
@@ -3717,7 +3718,7 @@
       "accident_id_sp": "20251322720609231",
       "latitude": 28.536246056941,
       "longitude": 77.089365232,
-      "severity": "Grievous Injury",
+      "severity": "Fatal",
       "district_name": "GURUGRAM",
       "station_name": "BILASPUR",
       "candidates": [
@@ -3823,7 +3824,7 @@
       "accident_id_sp": "20251324613102260",
       "latitude": 29.597737070925,
       "longitude": 75.100439716,
-      "severity": "Grievous Injury",
+      "severity": "Fatal",
       "district_name": "SIRSA",
       "station_name": "CITY SIRSA",
       "candidates": [
@@ -3929,7 +3930,7 @@
       "accident_id_sp": "20251321718830429",
       "latitude": 30.046273253241,
       "longitude": 76.929623284,
-      "severity": "Grievous Injury",
+      "severity": "Fatal",
       "district_name": "KURUKSHETRA",
       "station_name": "PEHOWA",
       "candidates": [
@@ -4141,7 +4142,7 @@
       "accident_id_sp": "20251321070994141",
       "latitude": 28.375348865759,
       "longitude": 77.236825621,
-      "severity": "Minor Injury Hospitalized",
+      "severity": "Fatal",
       "district_name": "FARIDABAD",
       "station_name": "NEELAM CHOWK",
       "candidates": [
@@ -4247,7 +4248,7 @@
       "accident_id_sp": "20251325830723939",
       "latitude": 28.195840202589,
       "longitude": 76.925020064,
-      "severity": "Grievous Injury",
+      "severity": "Fatal",
       "district_name": "N U H",
       "station_name": "MOHMMADPUR",
       "candidates": [
@@ -4353,7 +4354,7 @@
       "accident_id_sp": "20251321322707040",
       "latitude": 29.373579599237,
       "longitude": 77.042987303,
-      "severity": "Minor Injury Hospitalized",
+      "severity": "Fatal",
       "district_name": "PANIPAT",
       "station_name": "SAMALKHA",
       "candidates": [
@@ -4459,7 +4460,7 @@
       "accident_id_sp": "20251321062431737",
       "latitude": 28.333657012989,
       "longitude": 77.34612717,
-      "severity": "Minor Injury Hospitalized",
+      "severity": "Fatal",
       "district_name": "FARIDABAD",
       "station_name": "SECTOR-58",
       "candidates": [
@@ -4565,7 +4566,7 @@
       "accident_id_sp": "20251321520237235",
       "latitude": 29.716250675459,
       "longitude": 76.957053095,
-      "severity": "Grievous Injury",
+      "severity": "Fatal",
       "district_name": "KARNAL",
       "station_name": "GHARAUNDA",
       "candidates": [
@@ -4777,7 +4778,7 @@
       "accident_id_sp": "20251321918465962",
       "latitude": 28.999874192738,
       "longitude": 77.016159245,
-      "severity": "Grievous Injury",
+      "severity": "Fatal",
       "district_name": "SONIPAT",
       "station_name": "SADAR SONIPAT",
       "candidates": [
@@ -4883,7 +4884,7 @@
       "accident_id_sp": "20251321322837715",
       "latitude": 29.367414875973,
       "longitude": 76.90189443,
-      "severity": "Minor Injury Non-Hospitalized",
+      "severity": "Fatal",
       "district_name": "PANIPAT",
       "station_name": "SAMALKHA",
       "candidates": [
@@ -4989,7 +4990,7 @@
       "accident_id_sp": "20251324016208618",
       "latitude": 29.179415376668,
       "longitude": 75.731528411,
-      "severity": "Non-Injury",
+      "severity": "Fatal",
       "district_name": "HISAR",
       "station_name": "CITY HISAR",
       "candidates": [
@@ -5095,7 +5096,7 @@
       "accident_id_sp": "20251323622385577",
       "latitude": 28.130377160675,
       "longitude": 76.549066476,
-      "severity": "Minor Injury Hospitalized",
+      "severity": "Fatal",
       "district_name": "REWARI",
       "station_name": "BAWAL",
       "candidates": [
@@ -5201,7 +5202,7 @@
       "accident_id_sp": "20251324024376807",
       "latitude": 29.188370193685,
       "longitude": 75.668347516,
-      "severity": "Minor Injury Hospitalized",
+      "severity": "Fatal",
       "district_name": "HISAR",
       "station_name": "HANSI",
       "candidates": [
@@ -5413,7 +5414,7 @@
       "accident_id_sp": "20251321513374680",
       "latitude": 29.596338224036,
       "longitude": 77.03930146,
-      "severity": "Minor Injury Hospitalized",
+      "severity": "Fatal",
       "district_name": "KARNAL",
       "station_name": "CITY KARNAL",
       "candidates": [
@@ -5625,7 +5626,7 @@
       "accident_id_sp": "20251323630233636",
       "latitude": 28.259827103579,
       "longitude": 76.634651722,
-      "severity": "Grievous Injury",
+      "severity": "Fatal",
       "district_name": "REWARI",
       "station_name": "KOSLI",
       "candidates": [
